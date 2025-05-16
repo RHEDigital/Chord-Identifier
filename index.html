@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guitar Chord Identifier</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Guitar Chord Identifier</h1>
+    <button id="resetButton">Reset</button>
+    <button id="toggleTheme">Toggle Fretboard</button>
+  </header>
+
+  <main>
+    <section style="padding: 1rem; background: #2c2c2c; color: #ccc;">
+      <h2 style="margin: 0 0 0.5rem 0;">How to Use</h2>
+      <ul style="margin: 0; padding-left: 1.2rem;">
+        <li>Click on frets to add finger positions.</li>
+        <li>Barre chords will be automatically recognized and highlighted.</li>
+        <li>The chord name and notes will appear below.</li>
+        <li>Use the Reset button to clear the fretboard.</li>
+      </ul>
+    </section>
+
+    <div class="fretboard-wrapper">
+      <div class="fretboard-labels" id="stringLabels"></div>
+      <div class="fretboard-area">
+        <div id="fretNumbers" class="fret-numbers"></div>
+        <div id="fretboard" class="fretboard"></div>
+      </div>
+    </div>
+    <div id="chordOutput">Select a shape to identify the chord</div>
+
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="https://forms.gle/fNCS4FukQ1t2399s5" target="_blank" style="color: #e74c3c; font-weight: bold;">
+        Found a bug or have a suggestion? Let us know!
+      </a>
+    </div>
+  </main>  
+
+  <script src="tonal.min.js"></script>
+  <script src="script.js"></script>  
+</body>
+</html>
